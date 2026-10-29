@@ -1,0 +1,33 @@
+{
+  "manifestVersion": "1.0",
+  "publishingInformation": {
+    "locales": {
+      "en-US": {
+        "name": "WebPilot Task Agent",
+        "shortDescription": "Autonomous web task planner and verifier with cryptographic approval gates for Alexa+.",
+        "fullDescription": "WebPilot lets Alexa+ complete multi-step web tasks safely. It compiles your goal into a plan, routes every step to the best capability tier (structured APIs, semantic DOM reading in a headless browser, or escalation to you), and filters all page content through an untrusted-content firewall that removes hidden prompt-injection attacks. Purchases, form submissions and account changes are never executed autonomously: WebPilot locks the exact parameters with a SHA-256 hash and waits for your approval, which issues a one-time HMAC token. If the page changes after you approve, for example the price goes up, the action is cancelled. Every result is checked against post-action evidence such as receipt numbers, confirmation pages and recomputed arithmetic before WebPilot reports it as done. Logins, one-time passcodes and CAPTCHAs are reported honestly as blocked and are never bypassed.",
+        "examplePhrases": [
+          "Alexa, ask WebPilot to check my college attendance below 75 percent",
+          "Alexa, ask WebPilot to compare 16GB RAM laptops under 80000 rupees",
+          "Alexa, ask WebPilot to analyze the Model Context Protocol GitHub repository"
+        ]
+      }
+    },
+    "category": "PRODUCTIVITY"
+  },
+  "apis": {
+    "custom": {
+      "mcpServer": {
+        "transport": "STREAMABLE_HTTP",
+        "protocolVersion": "2025-11-25",
+        "endpoint": "http://localhost:8000/mcp"
+      }
+    }
+  },
+  "privacyAndCompliance": {
+    "allowsPurchases": false,
+    "usesPersonalInfo": false,
+    "isChildDirected": false,
+    "isExportCompliant": true
+  }
+}

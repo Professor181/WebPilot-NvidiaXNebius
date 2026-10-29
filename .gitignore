@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Secrets
+.env
+.env.local
+
+# Runtime data
+backend/webpilot.db
+backend/webpilot.db-wal
+backend/webpilot.db-shm
+backend/artifacts/
+backend/browser_profile/
+
+# Node / Next.js (Part 2)
+node_modules/
+.next/
+out/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #070b14;
+  color: #e2e8f0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0, 202, 255, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(99, 102, 241, 0.14), transparent 55%),
+    #070b14;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl bg-obsidian-850/70 ring-1 ring-slate-800/80 backdrop-blur-xl;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+  }
+  .section-title {
+    @apply text-xs font-bold uppercase tracking-[0.16em] text-slate-400;
+  }
+  .status-pill {
+    @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-[10px] font-bold tracking-wide ring-1;
+  }
+  .chip {
+    @apply rounded-md bg-slate-900 px-1.5 py-0.5 text-slate-300 ring-1 ring-slate-800;
+  }
+  .chip-btn {
+    @apply inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-2.5 py-1.5 text-[11px] font-semibold text-slate-200 ring-1 ring-slate-700 transition hover:ring-cyan-400/60 disabled:opacity-40;
+  }
+  .chat-input-sm {
+    @apply rounded-lg bg-slate-950/70 px-3 py-2 text-sm text-slate-100 ring-1 ring-slate-800 placeholder:text-slate-500 focus:outline-none focus:ring-cyan-500/60;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
